@@ -1,0 +1,23 @@
+var v = 1;
+var f1 = function () {
+  console.log(v); // 2
+}
+
+if(true) {
+  var v = 2; // var is function scoped, therefore 2 is going to replace 1 in global execution Context
+  f1();
+}
+
+--------------------------------------------------------------------------
+
+var v = 1;
+var f1 = function () {
+  console.log(v); // 1
+}
+
+var f2 = function () {
+  var v = 2;
+  f1();
+}
+
+f2();
