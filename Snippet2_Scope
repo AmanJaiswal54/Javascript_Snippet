@@ -1,0 +1,7 @@
+let person1 = {
+    name: 'rahul'
+}
+
+let person2 = Object.create(person1);
+delete person2.name;
+console.log('person2', person2.name);
